@@ -1,5 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+:root{
+    --bg-color-h1 : #112031;
+    --bg-color-h2 : #152D35;
+    --bg-color-h3 : #345B63;
+    --bg-color-h4 : #D4ECDD;
+    
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-color-h1);
+    color: var(--bg-color-h3);
+}
+body{
+    height: 700px;
+}
+.title{
+    font-size: 72px;
+    background-color: var(--bg-color-h1);
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.main{
+    display: flex;
+    width: 320px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px auto;
+}
+.players{
+    display: flex;
+}
+
+
+@media only screen and (max-width: 430px) {
+    .title{
+        font-size: 40px;
+        white-space: nowrap;
+    }
+    .main{
+        display: flex;
+        width: 256px;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px auto;
+    }
+    .players{
+        flex-wrap: wrap;
+    }
 }
