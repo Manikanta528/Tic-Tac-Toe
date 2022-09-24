@@ -7,17 +7,23 @@
     --bg-color-h4 : #D4ECDD;
     
 }
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-    background-color: var(--bg-color-h1);
+    font-family: 'Poppins', sans-serif;
     color: var(--bg-color-h3);
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
 }
 body{
     height: 700px;
+    background-color: var(--bg-color-h1);
 }
 .title{
     font-size: 72px;
@@ -28,14 +34,77 @@ body{
 }
 .main{
     display: flex;
-    width: 320px;
-    height: auto;
+    width: 384px;
+    height: 512px;
     flex-direction: column;
+    background-color: var(--bg-color-h2);
+    justify-content: space-around;
     align-items: center;
     margin: 80px auto;
+    border: var(--bg-color-h3) 4px solid;
 }
 .players{
     display: flex;
+    width: 376px;
+    justify-content: space-around;
+    
+}
+.player{
+    padding-top: 16px;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    background-color: var(--bg-color-h3);
+}
+.x,.o{
+    font-size: 80px;
+    color: inherit;
+    text-align: center;
+}
+
+.button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert ,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 188px;
+  will-change: transform;
+}
+
+.button:disabled {
+  pointer-events: none;
+}
+
+.button:hover {
+  color: #000;
+  background-color: #fff;
+  box-shadow: rgba(255, 255, 255, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
 
 
@@ -45,12 +114,8 @@ body{
         white-space: nowrap;
     }
     .main{
-        display: flex;
-        width: 256px;
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-        margin: 40px auto;
+        width: 360px;
+        height: 512px;
     }
     .players{
         flex-wrap: wrap;
