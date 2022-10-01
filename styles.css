@@ -4,7 +4,7 @@
     --bg-color-h1 : #112031;
     --bg-color-h2 : #152D35;
     --bg-color-h3 : #345B63;
-    --bg-color-h4 : #D4ECDD;
+    --bg-color-h4 : #d4ecdd;
     
 }
 *{
@@ -58,7 +58,7 @@ body{
     text-align: center;
     background-color: var(--bg-color-h3);
 }
-.x,.o{
+.x1,.o1{
     font-size: 80px;
     color: inherit;
     text-align: center;
@@ -107,6 +107,78 @@ body{
   transform: translateY(0);
 }
 
+.hideBoard{
+    display: none;
+}
+.board{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 64px;
+    display: none;
+}
+
+.grid{
+    display: grid;
+    grid-template: repeat(3, 150px) / repeat(3, 150px);
+}
+.grid-item{
+    border: #345B63 .5px solid;
+    color: #ff1178;
+}
+.grid-item:active{
+    border: none;
+}
+.grid-item:hover{
+    box-shadow:
+    0 0 8px 4px #fff,  /* inner white */
+    0 0 14px 8px #345B63; /* middle magenta 
+    0 0 70px 45px #0ff;  outer cyan */
+}
+
+.score{
+    margin-top: 32px;
+}
+#back{
+    padding: 6px 12px;
+}
+.x,.o{
+    padding: 16px;
+    font-size: 80px;
+    text-align: center;
+}
+.x{
+    color: #fff205;
+}
+.o{
+    color: #ff1178;
+}
+.Draw,.xWon,.oWon{
+    position: absolute;
+    width: 60%;
+    height: 320px;
+    display: flex;
+    margin: 0px auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color-h1);
+    border: #fff 1px solid;
+    top: 256px;
+    right: auto;
+    left: auto;
+    color: #fff; 
+    font-size: 72px; 
+    display: none;
+}
+.visibleBoard{
+    display: flex;
+}
+.output{
+    display: flex;
+    justify-content: center;
+}
 
 @media only screen and (max-width: 430px) {
     .title{
